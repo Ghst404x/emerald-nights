@@ -1,0 +1,47 @@
+name: Emerald Nights CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-modpack:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: 🌙 Validate Emerald Nights Configuration
+      run: |
+        echo "🔍 Checking modpack files..."
+        
+        # Check if essential directories exist
+        if [ -d "mods" ]; then
+          echo "✅ Mods directory found"
+        else
+          echo "❌ Mods directory missing"
+          exit 1
+        fi
+        
+        if [ -d "config" ]; then
+          echo "✅ Config directory found"
+        else
+          echo "❌ Config directory missing"
+          exit 1
+        fi
+        
+        echo "✅ Modpack structure validated!"
+    
+    - name: 📝 Generate Mod Count
+      run: |
+        if [ -d "mods" ]; then
+          MOD_COUNT=$(find mods -name "*.jar" | wc -l)
+          echo "📦 Total Mods: $MOD_COUNT"
+        fi
+    
+    - name: 🎉 Build Success
+      run: |
+        echo "🌙 Emerald Nights validation complete!"
+        echo "✨ Ready for release!"
