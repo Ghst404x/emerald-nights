@@ -6,6 +6,9 @@
   <a href="https://modrinth.com/modpack/emerald-nights">
     <img src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg" alt="Available on Modrinth">
   </a>
+  <a href="https://www.curseforge.com/minecraft/modpacks/emerald-nights">
+    <img src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/curseforge_vector.svg" alt="Available on CurseForge">
+  </a>
   <a href="https://discord.gg/your-discord-invite">
     <img src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/social/discord-plural_vector.svg" alt="Join Discord">
   </a>
